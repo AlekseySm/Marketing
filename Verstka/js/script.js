@@ -16,7 +16,7 @@ $(document).ready(function () {
     //     })
     // }
 
-    initMap();
+    //initMap();
 
     $('.js-menu-toggle').on('click', function () {
         $(this).toggleClass('toggler__icon--open');
