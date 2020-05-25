@@ -1798,7 +1798,7 @@ div.page {
 
         &:before {
             content: '';
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             left: auto;
             width: 100%;
         }
@@ -2182,12 +2182,18 @@ div.page {
     }
 
     section.home {
-        background-position: 80% -75%;
-        background-size: cover;
+        background-position: bottom 75% center;
+        background-size: 130%;
     }
 }
 
 @media screen and (max-width: 640px) {
+
+    section.home {
+        background-position: 80% 0%;
+        background-size: 190%;
+    }
+
     .contact__list {
         flex-direction: column;
     }
@@ -2302,6 +2308,13 @@ div.page {
     }
 }
 
+@media screen and (max-width: 575px) {
+
+    section.home {
+        background-size: 200%;
+    }
+}
+
 @media screen and (max-width: 540px) {
     .conteiner {
         padding-left: 20px;
@@ -2343,11 +2356,21 @@ div.page {
     .info-item__title {
         padding-right: 100px;
     }
+}
 
+@media screen and (max-width: 500px) {
 
+    section.home {
+        background-size: cover;
+    }
 }
 
 @media screen and (max-width: 425px) {
+
+    section.home {
+        background-size: 170%;
+    }
+
     .info {
         .conteiner {
             padding: 0;
@@ -2415,6 +2438,12 @@ div.page {
 }
 
 @media screen and (max-width: 375px) {
+
+    section.home {
+        background-position: 80% 0%;
+        background-size: 205%;
+    }
+
     .platform__social-list {
         padding: 35px 20px 20px 20px;
     }
@@ -2438,5 +2467,21 @@ div.page {
 
     .contact__social li {
         margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    section.home {
+        background-size: 220%;
+        background-position: 80% 20%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    section.home {
+        background-size: 275%;
+        background-position: 80% -20%;
     }
 }
