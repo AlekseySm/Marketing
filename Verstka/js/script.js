@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     // function initMap() {
     //     var e = {
     //             lat: 40.6971494,
@@ -95,14 +96,7 @@ $(document).ready(function () {
         $oc.slideToggle();
     });
 
-    $(window).on('resize', function (e) {
-        if (window.innerWidth < 1025) {
-            $('.hide').hide();
-        }
-    }).trigger('resize');
-
-    $('.btn-more').click(function () {
-        event.preventDefault();
+    $('.btn-more').on('click', function () {
         $(this).toggleClass('opened').toggleClass('closed').prev().slideToggle();
 
         if ($(this).hasClass('opened')) {
@@ -110,9 +104,19 @@ $(document).ready(function () {
         } else {
             $(this).html('Read more');
         }
+        return false;
     });
 
 });
+
+// $(window).on('resize', function (event) {
+//     event.preventDefault()
+//     if (window.innerWidth < 1025) {
+//         $('.hide').hide().css('display', 'none');
+//     } else {
+//         $('.hide').show().css('display', 'block');
+//     }
+// }).triggerHandler('resize');
 
 $(window).scroll(function () {
     if ($(window).scrollTop() >= 70) {

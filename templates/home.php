@@ -781,7 +781,7 @@ get_header();
                     <div class="hide">
                         <?php echo get_sub_field('text_2'); ?>
                     </div>
-                    <a href="#" class="btn-more">Read more</a>
+                    <a href="#" class="btn-more closed">Read more</a>
                 </div>
                 <div class="our-team">
                     <div class="our-team__title">Our team</div>

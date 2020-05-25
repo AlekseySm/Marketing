@@ -222,6 +222,13 @@ section.home:after {
   width: 100%;
 }
 
+.home__sub {
+  height: 100%;
+  width: 50%;
+  margin-left: 50%;
+  background-color: #FBC715;
+}
+
 .home__heading {
   position: relative;
   z-index: 3;
@@ -241,13 +248,6 @@ section.home:after {
   font-size: 24px;
   line-height: 35px;
   text-align: left;
-}
-
-.home__sub {
-  height: 100%;
-  width: 50%;
-  margin-left: 50%;
-  background-color: #FBC715;
 }
 
 .home__nav {
@@ -439,7 +439,6 @@ section.home:after {
 
 .info-item {
   max-width: 422px;
-  min-width: 422px;
   padding: 40px 50px;
   -webkit-box-shadow: 0px 6px 8px #00000029;
           box-shadow: 0px 6px 8px #00000029;
@@ -1222,24 +1221,11 @@ section.home:after {
   margin-right: 15px;
 }
 
-.form__radio-box span span span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.form__radio-box label {
+  display: block;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 15px;
-}
-
-.form__radio-box span span span span {
-  margin: 0;
 }
 
 .form__label {
@@ -1288,10 +1274,6 @@ section.home:after {
           box-shadow: none;
   -webkit-transform: translateY(0.98);
           transform: translateY(0.98);
-}
-
-span.wpcf7-list-item {
-  margin: 0;
 }
 
 .contact {
@@ -1389,6 +1371,7 @@ span.wpcf7-list-item {
 
 .map {
   width: 100%;
+  height: 544px;
 }
 
 .map img {
@@ -1668,12 +1651,8 @@ span.wpcf7-list-item {
   color: #FBC715;
 }
 
-div.page {
+.page.service-page {
   padding: 115px 0 0 0;
-}
-
-div.page .form {
-  margin: 0 auto 0 30px;
 }
 
 .page__content {
@@ -1692,6 +1671,16 @@ div.page .form {
   font-size: 16px;
   line-height: 35px;
   margin-bottom: 20px;
+}
+
+.page__txt p {
+  font-size: 16px !important;
+  line-height: 35px !important;
+  margin-bottom: 20px !important;
+}
+
+.page .form {
+  margin: 0 auto 0 30px;
 }
 
 .service-page .page__txt {
@@ -1892,6 +1881,9 @@ div.page .form {
 }
 
 @media screen and (max-width: 1024px) {
+  .btn-more {
+    display: block;
+  }
   .slider-info .slick-next {
     left: 58%;
   }
@@ -1925,12 +1917,6 @@ div.page .form {
   .our-team__list li {
     width: 33%;
   }
-  .btn-more {
-    display: block;
-  }
-  .hide {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 980px) {
@@ -1953,18 +1939,6 @@ div.page .form {
     background-repeat: no-repeat;
     background-size: 120%;
   }
-  section.home:after {
-    content: '';
-    background-image: none;
-    z-index: 0;
-    display: none;
-  }
-  section.home:before {
-    content: '';
-    background-color: rgba(255, 255, 255, 0.8);
-    left: auto;
-    width: 100%;
-  }
   .home__heading {
     width: 100%;
     padding-bottom: 65px;
@@ -1983,6 +1957,18 @@ div.page .form {
     background-repeat: no-repeat;
     background-size: 60%;
     background-position: top center;
+  }
+  section.home:after {
+    content: '';
+    background-image: none;
+    z-index: 0;
+    display: none;
+  }
+  section.home:before {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.8);
+    left: auto;
+    width: 100%;
   }
   .social {
     top: 140px;
@@ -2021,9 +2007,6 @@ div.page .form {
   }
   .services-block__list li {
     width: 33%;
-  }
-  .info-item {
-    min-width: 385px;
   }
 }
 
@@ -2109,7 +2092,6 @@ div.page .form {
   }
   .info-item {
     margin-bottom: 215px;
-    min-width: 325px;
     width: 100%;
   }
   .info-item .behind-logo {
@@ -2399,22 +2381,6 @@ div.page .form {
     height: 1px;
     background: #FFA000;
   }
-  .form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .form-block:after {
-    background-image: none;
-  }
-  .form-block .conteiner {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .info-item {
-    min-width: auto;
-  }
 }
 
 @media screen and (max-width: 540px) {
@@ -2435,6 +2401,19 @@ div.page .form {
   .our-team__photo img {
     width: 100%;
   }
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-block:after {
+    background-image: none;
+  }
+  .form-block .conteiner {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
   .services-block__list li a svg {
     width: 75px;
     height: 75px;
@@ -2447,7 +2426,7 @@ div.page .form {
     left: 65%;
   }
   .info-item__title {
-    padding-right: 100px;
+    padding-right: 85px;
   }
 }
 
@@ -2480,7 +2459,6 @@ div.page .form {
   .info-item__title {
     font-size: 17px;
     line-height: 23px;
-    padding-right: 85px;
   }
   .info-item__list-name {
     font-size: 16px;
