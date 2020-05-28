@@ -128,15 +128,15 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   max-width: 120px;
   font-family: 'Cinzel', serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   padding-left: 20px;
 }
@@ -601,7 +601,7 @@ section.home:after {
           align-items: center;
   font-family: 'Cinzel', serif;
   font-weight: bold;
-  font-size: 27px;
+  font-size: 24px;
   line-height: 32px;
   text-align: center;
   text-decoration: none;
@@ -1419,7 +1419,7 @@ span.wpcf7-list-item {
   max-width: 120px;
   font-family: 'Cinzel', serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   text-align: center;
   text-decoration: none;
