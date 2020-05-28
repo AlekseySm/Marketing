@@ -566,7 +566,7 @@ section.home:after {
 .behind-item__btn {
   padding: 10px 60px;
   background: #FBC715;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   font-size: 16px;
   line-height: 19px;
@@ -649,7 +649,7 @@ section.home:after {
   position: relative;
   z-index: 2;
   padding: 0 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 21px;
   line-height: 25px;
   color: #2E2E2E;
