@@ -73,22 +73,26 @@ add_action('after_setup_theme', 'travel_setup');
 
 add_action('customize_register', 'dco_customize_register');
 
-function travel_scripts() {
-    wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/Verstka/liberary/slick/slick-theme.css',array(),'0.2');
-    wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/Verstka/liberary/slick/slick.css',array(),'0.2');
-    wp_enqueue_style( 'style-css', get_template_directory_uri() . '/Verstka/css/style.css',array(),'0.2');
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
+function travel_scripts()
+{
+    wp_enqueue_style('slick-theme', get_template_directory_uri() . '/Verstka/liberary/slick/slick-theme.css', array(), '0.2');
+    wp_enqueue_style('slick-css', get_template_directory_uri() . '/Verstka/liberary/slick/slick.css', array(), '0.2');
+    wp_enqueue_style('magnific-popup', get_template_directory_uri() . '/Verstka//css/magnific-popup.css', array(), '0.2');
+    wp_enqueue_style('style-css', get_template_directory_uri() . '/Verstka/css/style.css', array(), '0.2');
+    wp_enqueue_style('style', get_stylesheet_uri());
 
-    wp_enqueue_script( 'Jquery', get_template_directory_uri() . '/Verstka/js/libs/jquery-3.5.1.min.js',array(),'0.2');
-    wp_enqueue_script( 'Mask', get_template_directory_uri() . '/Verstka/js/libs/jquery.maskedinput.min.js',array(),'0.2',true);
+    wp_enqueue_script('Jquery', get_template_directory_uri() . '/Verstka/js/libs/jquery-3.5.1.min.js', array(), '0.2');
+    wp_enqueue_script('Mask', get_template_directory_uri() . '/Verstka/js/libs/jquery.maskedinput.min.js', array(), '0.2', true);
+    wp_enqueue_script('magnificPopup', get_template_directory_uri() . '/Verstka/js/libs/jquery.magnific-popup.min.js', array(), '0.2', true);
     wp_enqueue_script('carousel', get_template_directory_uri() . '/Verstka/js/libs/owl.carousel.min.js', array(), '20151215', true);
     wp_enqueue_script('slick', get_template_directory_uri() . '/Verstka/liberary/slick/slick.min.js', array(), '20151215', true);
     wp_enqueue_script('main', get_template_directory_uri() . '/Verstka/js/script.js', array(), '20151215', true);
 }
-add_action( 'wp_enqueue_scripts', 'travel_scripts' );
+add_action('wp_enqueue_scripts', 'travel_scripts');
 
-function add_additional_class_on_li($classes, $item, $args) {
-    if($args->add_li_class) {
+function add_additional_class_on_li($classes, $item, $args)
+{
+    if ($args->add_li_class) {
         $classes[] = $args->add_li_class;
     }
     return $classes;
@@ -144,10 +148,10 @@ if (function_exists('acf_add_options_page')) {
         'autoload' => false,
 
         /* (строка) Текст кнопки обновить. Добавлено в v5.3.7. */
-        'update_button'		=> __('Update', 'acf'),
+        'update_button'        => __('Update', 'acf'),
 
         /* (строка) Сообщение, появляющееся после сохранения настроек. Добавлено в v5.6.0. */
-        'updated_message'	=> __("Options Updated", 'acf'),
+        'updated_message'    => __("Options Updated", 'acf'),
 
     ));
 }

@@ -88,6 +88,25 @@ $(document).ready(function () {
         }]
     });
 
+    $(".slider-portfolio-popup").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        centerMode: true,
+        arrows: true,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 500,
+        responsive: [{
+            breakpoint: 901,
+            settings: {
+                arrows: false,
+            }
+        }]
+    });
+
     $("input[type='tel']").mask("+38 099 999-99-99");
 
     $('.info-item__list-name').on('click', function () {
@@ -105,6 +124,11 @@ $(document).ready(function () {
             $(this).html('Read more');
         }
         return false;
+    });
+
+    $('.portfolio-info__btn').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     });
 
 });

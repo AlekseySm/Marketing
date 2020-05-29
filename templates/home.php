@@ -818,7 +818,7 @@
                                 <?php echo get_sub_field('skill_3'); ?>
                             </li>
                         </ul>
-                        <a href="#" class="portfolio-info__btn">Посмотреть все работы</a>
+                        <a href="#portfolio-popup" class="portfolio-info__btn">Посмотреть все работы</a>
                     </div>
                     <div class="slider-portfolio">
                         <?php if (have_rows('slider')) : while (have_rows('slider')) : the_row();
@@ -848,7 +848,7 @@
                             <?php endwhile; ?>
                         <?php endif; ?>
                     </div>
-                    <a href="#" class="portfolio-info__btn portfolio-info__btn--mobile">Посмотреть все работы</a>
+                    <a href="#portfolio-popup" class="portfolio-info__btn portfolio-info__btn--mobile">Посмотреть все работы</a>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
@@ -1279,5 +1279,35 @@
     </div>
 </section>
 
-
 <?php echo get_footer(); ?>
+
+<div class="portfolio-popup mfp-hide white-popup" id="portfolio-popup">
+    <div class="mfp-close"></div>
+    <div class="slider-portfolio-popup">
+        <div>
+            <div class="slider-portfolio-popup__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/portfolio-1.jpg" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="slider-portfolio-popup__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/portfolio-2.jpg" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="slider-portfolio-popup__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/portfolio-3.jpg" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="slider-portfolio-popup__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/portfolio-4.jpg" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="slider-portfolio-popup__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/portfolio-5.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
