@@ -32,7 +32,7 @@ $(document).ready(function () {
     $(".nav-list__link").on("click", function (event) {
         event.preventDefault();
         $("html, body").stop().animate({
-            scrollTop: $($(this).attr("href")).offset().top - 100,
+            scrollTop: $($(this).attr("href")).offset().top - 70,
         }, 900);
     });
 
@@ -69,42 +69,29 @@ $(document).ready(function () {
         }]
     });
 
-    $(".slider-portfolio").slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-        centerMode: true,
-        arrows: true,
-        dots: false,
-        // autoplay: true,
-        // autoplaySpeed: 5000,
-        speed: 500,
-        responsive: [{
-            breakpoint: 901,
-            settings: {
-                arrows: false,
-            }
-        }]
+    $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        directionNav: false,
+        slideshow: false,
+        itemWidth: 120,
+        itemMargin: 5,
+        asNavFor: '#slider',
+        maxItems: 4
     });
 
-    $(".slider-portfolio-popup").slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-        centerMode: true,
-        arrows: true,
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 500,
-        responsive: [{
-            breakpoint: 901,
-            settings: {
-                arrows: false,
-            }
-        }]
+    $('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        directionNav: false,
+        animationLoop: false,
+        slideshow: true,
+        slideshowSpeed: 7000,
+        animationSpeed: 600,
+        itemWidth: 500,
+        sync: "#carousel",
+        maxItems: 1
     });
 
     $("input[type='tel']").mask("+38 099 999-99-99");
@@ -126,9 +113,30 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.portfolio-info__btn').magnificPopup({
-        type: 'inline',
-        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    // $('.portfolio-info__btn').magnificPopup({
+    //     type: 'inline',
+    //     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    // });
+
+    $('.portfolio-page-grid__link').magnificPopup({
+        type: 'image',
+        mainClass: 'mfp-with-zoom',
+        gallery: {
+            enabled: true
+        },
+
+        zoom: {
+            enabled: true,
+
+            duration: 300, // duration of the effect, in milliseconds
+            easing: 'ease-in-out', // CSS transition easing function
+
+            opener: function (openerElement) {
+
+                return openerElement.is('img') ? openerElement : openerElement.find('img');
+            }
+        }
+
     });
 
 });

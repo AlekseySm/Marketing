@@ -77,6 +77,7 @@ function travel_scripts()
 {
     wp_enqueue_style('slick-theme', get_template_directory_uri() . '/Verstka/liberary/slick/slick-theme.css', array(), '0.2');
     wp_enqueue_style('slick-css', get_template_directory_uri() . '/Verstka/liberary/slick/slick.css', array(), '0.2');
+    wp_enqueue_style('flexslider-css', get_template_directory_uri() . '/Verstka/liberary/flexslider/flexslider.css', array(), '0.2');
     wp_enqueue_style('magnific-popup', get_template_directory_uri() . '/Verstka//css/magnific-popup.css', array(), '0.2');
     wp_enqueue_style('style-css', get_template_directory_uri() . '/Verstka/css/style.css', array(), '0.2');
     wp_enqueue_style('style', get_stylesheet_uri());
@@ -85,6 +86,7 @@ function travel_scripts()
     wp_enqueue_script('Mask', get_template_directory_uri() . '/Verstka/js/libs/jquery.maskedinput.min.js', array(), '0.2', true);
     wp_enqueue_script('magnificPopup', get_template_directory_uri() . '/Verstka/js/libs/jquery.magnific-popup.min.js', array(), '0.2', true);
     wp_enqueue_script('carousel', get_template_directory_uri() . '/Verstka/js/libs/owl.carousel.min.js', array(), '20151215', true);
+    wp_enqueue_script('flexslider', get_template_directory_uri() . '/Verstka/js/libs/jquery.flexslider-min.js', array(), '20151215', true);
     wp_enqueue_script('slick', get_template_directory_uri() . '/Verstka/liberary/slick/slick.min.js', array(), '20151215', true);
     wp_enqueue_script('main', get_template_directory_uri() . '/Verstka/js/script.js', array(), '20151215', true);
 }

@@ -818,41 +818,74 @@
                                 <?php echo get_sub_field('skill_3'); ?>
                             </li>
                         </ul>
-                        <a href="#portfolio-popup" class="portfolio-info__btn">Посмотреть все работы</a>
+                        <a href="<?php echo site_url('portfolio'); ?>" class="portfolio-info__btn">Посмотреть все работы</a>
                     </div>
                     <div class="slider-portfolio">
-                        <?php if (have_rows('slider')) : while (have_rows('slider')) : the_row();
-                                // variables
-                                $title = get_sub_field('title');
-                                $description = get_sub_field('description');
+                        <?php if (have_rows('slider')) :  the_row();
+                            // variables
+                            $title = get_sub_field('title');
+                            $description = get_sub_field('description');
                         ?>
-                                <div>
-                                    <div class="portfolio-item">
-                                        <div class="portfolio-item__wrapper">
-                                            <div class="portfolio-item__info">
-                                                <div class="portfolio-item__name">
-                                                    <?php echo $title; ?> </div>
-                                                <p class="portfolio-txt">
-                                                    <?php echo $description; ?>
-                                                </p>
-                                            </div>
-                                            <div class="portfolio-item__img">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/49d2d290050559.5e0b5991541c5.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="portfolio-item__img-lg">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/images/6c6aa294825929.5e8875d200d54.png" alt="">
-                                        </div>
-                                    </div>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item__info">
+                                    <div class="portfolio-item__name">
+                                        <?php echo $title; ?> </div>
+                                    <p class="portfolio-txt">
+                                        <?php echo $description; ?>
+                                    </p>
                                 </div>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+                            <?php endif; ?>
+
+                            <div id="slider">
+                                <ul class="slides">
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/1.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/1.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/3.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/3.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/7.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/7.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="carousel">
+                                <ul class="slides">
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/1.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/1.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/3.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/3.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/7.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/7.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg" />
+                                    </li>
+                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg" />
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                            <a href="<?php echo site_url('portfolio'); ?>" class="portfolio-info__btn portfolio-info__btn--mobile">Посмотреть все работы</a>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                     </div>
-                    <a href="#portfolio-popup" class="portfolio-info__btn portfolio-info__btn--mobile">Посмотреть все работы</a>
-                <?php endwhile; ?>
-            <?php endif; ?>
         </div>
-    </div>
 </section>
 
 <section id="about-us" class="about-us">
@@ -1281,7 +1314,7 @@
 
 <?php echo get_footer(); ?>
 
-<div class="portfolio-popup mfp-hide white-popup" id="portfolio-popup">
+<!-- <div class="portfolio-popup mfp-hide white-popup" id="portfolio-popup">
     <div class="mfp-close"></div>
     <div class="slider-portfolio-popup">
         <div>
@@ -1310,4 +1343,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
