@@ -2067,6 +2067,8 @@ div.page .form {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .white-popup {
     padding: 20px 40px;
