@@ -761,6 +761,8 @@ section.home:after {
   line-height: 22px;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .portfolio-info__btn--mobile {
@@ -2062,6 +2064,8 @@ div.page .form {
   }
   .portfolio-info__btn--mobile {
     display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-top: 35px;
   }
   .white-popup {
