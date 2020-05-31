@@ -844,19 +844,29 @@
                                         </a>
                                     </li>
                                     <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg" />
+                                        <a href="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg" class="slides__link">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg" />
+                                        </a>
                                     </li>
                                     <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/3.jpg">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/3.jpg" />
+                                        <a href="<?php echo get_template_directory_uri(); ?>/images/portfolio/3.jpg" class="slides__link">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/3.jpg" />
+                                        </a>
                                     </li>
                                     <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/7.jpg">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/7.jpg" />
+                                        <a href="<?php echo get_template_directory_uri(); ?>/images/portfolio/7.jpg" class="slides__link">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/7.jpg" />
+                                        </a>
                                     </li>
                                     <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg" />
+                                        <a href="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg" class="slides__link">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg" />
+                                        </a>
                                     </li>
                                     <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg" />
+                                        <a href="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg" class="slides__link">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg" />
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
