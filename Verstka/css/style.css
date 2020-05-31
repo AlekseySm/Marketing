@@ -1797,6 +1797,30 @@ div.page .form {
   background-position: center;
 }
 
+.flex-direction-nav .flex-next {
+  right: 20px;
+  text-align: right;
+  opacity: 1;
+}
+
+.flex-direction-nav .flex-prev {
+  left: 20px;
+  text-align: left;
+  opacity: 1;
+}
+
+.slides li {
+  cursor: pointer;
+}
+
+#carousel .slides li {
+  opacity: 0.5;
+}
+
+#carousel .slides li.flex-active-slide {
+  opacity: 1;
+}
+
 @media screen and (max-width: 1800px) {
   section.home:after {
     background-position: bottom 1% right 5%;
@@ -2056,8 +2080,8 @@ div.page .form {
     position: relative;
   }
   .slider-portfolio {
-    margin-left: calc(100% - 350px);
     width: 100%;
+    margin-left: 0;
   }
   .portfolio-info__btn {
     display: none;

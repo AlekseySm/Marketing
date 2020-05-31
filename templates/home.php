@@ -839,7 +839,9 @@
                             <div id="slider">
                                 <ul class="slides">
                                     <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/1.jpg">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/1.jpg" />
+                                        <a href="<?php echo get_template_directory_uri(); ?>/images/portfolio/1.jpg" class="slides__link">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/1.jpg" />
+                                        </a>
                                     </li>
                                     <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/2.jpg" />

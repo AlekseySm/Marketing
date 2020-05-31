@@ -1,24 +1,5 @@
 $(document).ready(function () {
 
-
-    // function initMap() {
-    //     var e = {
-    //             lat: 40.6971494,
-    //             lng: 74.2598655
-    //         },
-    //         a = new google.maps.Map(document.getElementById("map"), {
-    //             zoom: 6,
-    //             center: e,
-    //             disableDefaultUI: !0
-    //         });
-    //     new google.maps.Marker({
-    //         position: e,
-    //         map: a
-    //     })
-    // }
-
-    //initMap();
-
     $('.js-menu-toggle').on('click', function () {
         $(this).toggleClass('toggler__icon--open');
         $('.js-nav').toggleClass('nav-list--open');
@@ -84,7 +65,7 @@ $(document).ready(function () {
     $('#slider').flexslider({
         animation: "slide",
         controlNav: false,
-        directionNav: false,
+        directionNav: true,
         animationLoop: false,
         slideshow: true,
         slideshowSpeed: 7000,
@@ -113,47 +94,36 @@ $(document).ready(function () {
         return false;
     });
 
-    // $('.portfolio-info__btn').magnificPopup({
-    //     type: 'inline',
-    //     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-    // });
+    function mugniPop(element) {
+        $(element).magnificPopup({
+            type: 'image',
+            mainClass: 'mfp-with-zoom',
+            gallery: {
+                enabled: true
+            },
 
-    $('.portfolio-page-grid__link').magnificPopup({
-        type: 'image',
-        mainClass: 'mfp-with-zoom',
-        gallery: {
-            enabled: true
-        },
+            zoom: {
+                enabled: true,
 
-        zoom: {
-            enabled: true,
+                duration: 300, // duration of the effect, in milliseconds
+                easing: 'ease-in-out', // CSS transition easing function
 
-            duration: 300, // duration of the effect, in milliseconds
-            easing: 'ease-in-out', // CSS transition easing function
+                opener: function (openerElement) {
 
-            opener: function (openerElement) {
-
-                return openerElement.is('img') ? openerElement : openerElement.find('img');
+                    return openerElement.is('img') ? openerElement : openerElement.find('img');
+                }
             }
+        });
+    };
+
+    mugniPop('.slides__link');
+    mugniPop('.portfolio-page-grid__link');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 70) {
+            $('.header-js').addClass('header--fixed');
+        } else {
+            $('.header-js').removeClass('header--fixed');
         }
-
     });
-
-});
-
-// $(window).on('resize', function (event) {
-//     event.preventDefault()
-//     if (window.innerWidth < 1025) {
-//         $('.hide').hide().css('display', 'none');
-//     } else {
-//         $('.hide').show().css('display', 'block');
-//     }
-// }).triggerHandler('resize');
-
-$(window).scroll(function () {
-    if ($(window).scrollTop() >= 70) {
-        $('.header-js').addClass('header--fixed');
-    } else {
-        $('.header-js').removeClass('header--fixed');
-    }
 });
