@@ -1,0 +1,14 @@
+/node_modules
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.vscode
+/.idea
+package-lock.json
+
+/public/build
+/maintenance/build
+yarn.lock
+/yarn.lock
