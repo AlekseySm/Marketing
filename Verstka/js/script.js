@@ -42,10 +42,13 @@ $(document).ready(function () {
         // autoplay: true,
         // autoplaySpeed: 5000,
         speed: 500,
+        centerMode: true,
+        // centerPadding: '40px',       
         responsive: [{
             breakpoint: 821,
             settings: {
                 dots: true,
+                centerMode: false,
             }
         }]
     });

@@ -483,7 +483,7 @@
 
 </section>
 <div class="info">
-    <div class="conteiner">
+    <div class="conteiner-2">
         <div class="slider-info">
             <?php if (have_rows('slider_info')) : while (have_rows('slider_info')) : the_row();
                     // variables
