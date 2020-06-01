@@ -1751,6 +1751,12 @@ div.page {
             overflow: hidden;
         }
     }
+
+    .info-item {
+        transform: scale(1);
+        opacity: 1;
+        border-radius: 0;
+    }
 }
 
 @media screen and (max-width: 1600px) {
@@ -2104,16 +2110,6 @@ div.page {
         padding: 40px 0 0 0;
     }
 
-    // .slick-active {
-
-    //     .slider-item {
-
-    //         .behind-item {
-    //             display: none;
-    //         }
-    //     }
-    // }
-
     .services {
         padding: 60px 0 45px 0;
     }
@@ -2161,9 +2157,6 @@ div.page {
     }
 
     .info-item {
-        transform: scale(1);
-        opacity: 1;
-        border-radius: 0;
         margin-bottom: 215px;
         min-width: 325px;
         width: 100%;

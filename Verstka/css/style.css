@@ -1871,6 +1871,12 @@ div.page .form {
   .slider-info .slick-list {
     overflow: hidden;
   }
+  .info-item {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    border-radius: 0;
+  }
 }
 
 @media screen and (max-width: 1600px) {
@@ -2183,10 +2189,6 @@ div.page .form {
     left: 60%;
   }
   .info-item {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-    border-radius: 0;
     margin-bottom: 215px;
     min-width: 325px;
     width: 100%;
