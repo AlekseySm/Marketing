@@ -505,7 +505,7 @@
                                 ?>
                                         <li class="">
                                             <div class="info-item__list-name"><?php echo $title_item; ?></div>
-                                            <ol class="info-item__list-inner <?php if ($i === 1) echo 'info-item__list-inner--open'; ?>">
+                                            <ol class="info-item__list-inner <?php if ($i === 1) echo ''; ?>">
                                                 <?php if (have_rows('single_item')) : while (have_rows('single_item')) : the_row();
                                                         // variables
                                                         $item_name = get_sub_field('item_name');

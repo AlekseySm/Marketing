@@ -69,7 +69,7 @@ $(document).ready(function () {
         animation: "slide",
         controlNav: false,
         directionNav: true,
-        animationLoop: false,
+        animationLoop: true,
         slideshow: true,
         slideshowSpeed: 7000,
         animationSpeed: 600,
