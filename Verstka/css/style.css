@@ -1833,12 +1833,20 @@ div.page .form {
 .flex-direction-nav .flex-next {
   right: 20px;
   text-align: right;
+  opacity: 0.5;
+}
+
+.flex-direction-nav .flex-next:hover {
   opacity: 1;
 }
 
 .flex-direction-nav .flex-prev {
   left: 20px;
   text-align: left;
+  opacity: 0.5;
+}
+
+.flex-direction-nav .flex-prev:hover {
   opacity: 1;
 }
 
@@ -1852,6 +1860,10 @@ div.page .form {
 
 #carousel .slides li.flex-active-slide {
   opacity: 1;
+}
+
+.flex-direction-nav a:before {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (max-width: 1800px) {
@@ -1993,6 +2005,36 @@ div.page .form {
   .hide {
     display: none;
   }
+  .portfolio__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .portfolio-info {
+    position: relative;
+  }
+  .slider-portfolio {
+    width: 100%;
+    margin-left: 0;
+  }
+  .portfolio-info__btn {
+    display: none;
+  }
+  .portfolio-info__btn--mobile {
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -2096,36 +2138,6 @@ div.page .form {
 }
 
 @media screen and (max-width: 900px) {
-  .portfolio__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .portfolio-info {
-    position: relative;
-  }
-  .slider-portfolio {
-    width: 100%;
-    margin-left: 0;
-  }
-  .portfolio-info__btn {
-    display: none;
-  }
-  .portfolio-info__btn--mobile {
-    display: block;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin-top: 35px;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .white-popup {
     padding: 20px 40px;
   }

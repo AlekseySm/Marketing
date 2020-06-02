@@ -547,7 +547,7 @@
                             </div>
                             <ul class="services-block__list">
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('social-media-strategy-development'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="101.621" height="119.555" viewBox="0 0 101.621 119.555">
                                             <defs>
                                                 <style>
@@ -565,7 +565,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('graphic-design-videography-photography'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="119.588" height="84.869" viewBox="0 0 119.588 84.869">
                                             <defs>
                                                 <style>
@@ -585,7 +585,7 @@
                                         <?php echo get_sub_field('text_2'); ?> </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('consulting-services'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="111.451" height="119.412" viewBox="0 0 111.451 119.412">
                                             <defs>
                                                 <style>
@@ -602,7 +602,7 @@
                                         <?php echo get_sub_field('text_3'); ?> </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('creating-targeted-ads'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="119.21" height="107.291" viewBox="0 0 119.21 107.291">
                                             <defs>
                                                 <style>
@@ -624,7 +624,7 @@
                                         <?php echo get_sub_field('text_4'); ?> </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('customized-automated-chats-whatsapp-instagram-facebook'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="71.149" height="118.582" viewBox="0 0 71.149 118.582">
                                             <defs>
                                                 <style>
@@ -643,7 +643,7 @@
                                         <?php echo get_sub_field('text_5'); ?> </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('creating-e-commerce-store-on-your-social-media-accounts-instagram-facebook'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="119.861" height="119.861" viewBox="0 0 119.861 119.861">
                                             <defs>
                                                 <style>
@@ -667,7 +667,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('content-creation'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="88.328" height="115.195" viewBox="0 0 88.328 115.195">
                                             <defs>
                                                 <style>
@@ -688,7 +688,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('influencer-marketing'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="120.054" height="101.742" viewBox="0 0 120.054 101.742">
                                             <defs>
                                                 <style>
@@ -723,7 +723,7 @@
                             </div>
                             <ul class="services-block__list">
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('seo'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="119.022" height="111.088" viewBox="0 0 119.022 111.088">
                                             <defs>
                                                 <style>
@@ -743,7 +743,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('web-sites'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="123.579" height="111.221" viewBox="0 0 123.579 111.221">
                                             <defs>
                                                 <style>
@@ -767,7 +767,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('mobile-applications'); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="111.221" height="111.221" viewBox="0 0 111.221 111.221">
                                             <defs>
                                                 <style>
@@ -863,11 +863,6 @@
                                             <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg" />
                                         </a>
                                     </li>
-                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg">
-                                        <a href="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg" class="slides__link">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg" />
-                                        </a>
-                                    </li>
                                 </ul>
                             </div>
                             <div id="carousel">
@@ -886,9 +881,6 @@
                                     </li>
                                     <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/8.jpg" />
-                                    </li>
-                                    <li data-thumb="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg" />
                                     </li>
                                 </ul>
                             </div>

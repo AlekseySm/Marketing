@@ -1699,13 +1699,21 @@ div.page {
 .flex-direction-nav .flex-next {
     right: 20px;
     text-align: right;
-    opacity: 1;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .flex-direction-nav .flex-prev {
     left: 20px;
     text-align: left;
-    opacity: 1;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .slides {
@@ -1724,6 +1732,14 @@ div.page {
             }
         }
     }
+}
+
+.flex-direction-nav {
+
+    a:before {
+        color: rgba(0, 0, 0, 0.8);
+    }
+
 }
 
 @media screen and (max-width: 1800px) {
@@ -1829,41 +1845,6 @@ div.page {
 
 @media screen and (max-width: 1200px) {
 
-    // .portfolio-item__wrapper {
-    //     flex-direction: column;
-    // }
-
-    // .portfolio-item__info {
-    //     box-sizing: border-box;
-    //     margin-right: 0;
-    //     max-width: 350px;
-    // }
-
-    // .portfolio-item__img {
-    //     margin-top: 33px;
-    //     max-width: 350px;
-    // }
-
-    // .portfolio-item__img-lg {
-    //     max-width: 350px;
-    // }
-
-    // .slider-portfolio .slick-next {
-    //     left: 220px;
-    // }
-
-    // .slider-portfolio .slick-prev {
-    //     left: 100px;
-    // }
-
-    // .slider-portfolio {
-    //     margin-left: 50%;
-    // }
-
-    // .slider-info .slick-next {
-    //     left: 56%;
-    // }
-
     .form-block:after {
         background-position: 45%;
     }
@@ -1887,10 +1868,6 @@ div.page {
 }
 
 @media screen and (max-width: 1024px) {
-
-    // .slider-info .slick-next {
-    //     left: 58%;
-    // }
 
     .footer__main {
         padding: 0 50px;
@@ -1933,6 +1910,33 @@ div.page {
 
     .hide {
         display: none;
+    }
+
+    .portfolio__wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .portfolio-info {
+        position: relative;
+    }
+
+    .slider-portfolio {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .portfolio-info__btn {
+        display: none;
+    }
+
+    .portfolio-info__btn--mobile {
+        display: block;
+        box-sizing: border-box;
+        margin-top: 35px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -2058,33 +2062,9 @@ div.page {
 
 }
 
+
+
 @media screen and (max-width: 900px) {
-    .portfolio__wrapper {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .portfolio-info {
-        position: relative;
-    }
-
-    .slider-portfolio {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .portfolio-info__btn {
-        display: none;
-    }
-
-    .portfolio-info__btn--mobile {
-        display: block;
-        box-sizing: border-box;
-        margin-top: 35px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     .white-popup {
         padding: 20px 40px;
