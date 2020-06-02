@@ -71,7 +71,7 @@ $(document).ready(function () {
         directionNav: true,
         prevText: '',
         nextText: '',
-        animationLoop: false,
+        animationLoop: true,
         slideshow: true,
         slideshowSpeed: 7000,
         animationSpeed: 600,
