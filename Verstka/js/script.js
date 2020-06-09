@@ -17,6 +17,20 @@ $(document).ready(function () {
         }, 900);
     });
 
+    $('a[href$="#services"]').on("click", function (event) {
+        event.preventDefault();
+        $("html, body").stop().animate({
+            scrollTop: $($(this).attr("href")).offset().top - 70,
+        }, 900);
+    });
+
+    $('a[href$="#portfolio"]').on("click", function (event) {
+        event.preventDefault();
+        $("html, body").stop().animate({
+            scrollTop: $($(this).attr("href")).offset().top - 70,
+        }, 900);
+    });
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
@@ -69,7 +83,7 @@ $(document).ready(function () {
         animation: "slide",
         controlNav: false,
         directionNav: true,
-        animationLoop: false,
+        animationLoop: true,
         slideshow: true,
         slideshowSpeed: 7000,
         animationSpeed: 600,
@@ -129,4 +143,12 @@ $(document).ready(function () {
             $('.header-js').removeClass('header--fixed');
         }
     });
+
+    // $(window).on('popstate', function () {
+    //     location.reload(true);
+    // });
+
+    if (window.pageYOffset >= 70) {
+        $('.header-js').addClass('header--fixed');
+    }
 });
