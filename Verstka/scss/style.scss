@@ -120,7 +120,7 @@ h2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         max-width: 120px;
         font-family: 'Cinzel', serif;
         font-weight: bold;
@@ -128,7 +128,7 @@ h2 {
         font-size: 16px;
         // line-height: 24px;
         line-height: 20px;
-        text-align: left;
+        text-align: center;
         text-decoration: none;
         padding-left: 20px;
 
@@ -137,7 +137,7 @@ h2 {
             position: absolute;
             z-index: 2;
             top: -6px;
-            left: -6px;
+            left: 8px;
             width: 100%;
             height: 100%;
             background-image: url(../images/logo.svg);
@@ -235,6 +235,7 @@ section.home {
         font-size: 24px;
         line-height: 35px;
         text-align: left;
+        min-height: 245px;
     }
 }
 
@@ -575,7 +576,9 @@ section.home {
 
 .behind-logo {
     position: relative;
-    max-width: 230px;
+    z-index: 3;
+    // max-width: 230px;
+    max-width: 170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -583,9 +586,11 @@ section.home {
     font-family: 'Cinzel', serif;
     font-weight: bold;
     // font-size: 27px;
-    font-size: 23px;
+    // font-size: 23px;
     // line-height: 32px;
-    line-height: 28px;
+    // line-height: 28px;
+    font-size: 16px;
+    line-height: 20px;
     text-align: center;
     text-decoration: none;
 
@@ -593,8 +598,8 @@ section.home {
         content: '';
         position: absolute;
         z-index: 2;
-        top: -9px;
-        left: 0;
+        top: -5px;
+        left: -18px;
         width: 100%;
         height: 100%;
         background-image: url(../images/logo.svg);
@@ -602,8 +607,10 @@ section.home {
     }
 
     span {
-        font-size: 22px;
-        line-height: 26px;
+        // font-size: 22px;
+        // line-height: 26px;       
+        font-size: 14px;
+        line-height: 17px;
     }
 
 }
@@ -1028,6 +1035,10 @@ section.home {
     .behind-logo {
         margin: 0 auto;
         opacity: 0.5;
+
+        &:before {
+            left: 15px;
+        }
     }
 }
 
@@ -2125,7 +2136,7 @@ div.page {
         bottom: 25px;
         width: 100%;
         max-width: 375px;
-        padding-bottom: 25px;
+        padding-bottom: 45px;
     }
 
     .slider-info .slick-next {
@@ -2583,6 +2594,7 @@ div.page {
     .home__heading p {
         font-size: 14px;
         line-height: 26px;
+        min-height: 205px;
     }
 
     section.home {
@@ -2632,6 +2644,16 @@ div.page {
         line-height: 24px;
     }
 
+    // .social-list {
+    //     li {
+    //         a {
+    //             svg {
+    //                 max-width: 19px;
+    //                 max-height: 19px;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 @media screen and (max-width: 375px) {

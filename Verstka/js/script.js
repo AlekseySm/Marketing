@@ -6,11 +6,11 @@ $(document).ready(function () {
         $('.header__logo').toggleClass('header__logo--open');
     });
 
-    $('.nav-list__link-js').on('click', function () {
+    $('.nav-list__link').on('click', function () {
         $('.js-menu-toggle').removeClass('toggler__icon--open');
     });
 
-    $(".nav-list__link-js").on("click", function (event) {
+    $(".nav-list__link").on("click", function (event) {
         event.preventDefault();
         $("html, body").stop().animate({
             scrollTop: $($(this).attr("href")).offset().top - 70,
@@ -69,9 +69,7 @@ $(document).ready(function () {
         animation: "slide",
         controlNav: false,
         directionNav: true,
-        prevText: '',
-        nextText: '',
-        animationLoop: true,
+        animationLoop: false,
         slideshow: true,
         slideshowSpeed: 7000,
         animationSpeed: 600,

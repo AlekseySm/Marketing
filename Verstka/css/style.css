@@ -138,15 +138,15 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 120px;
   font-family: 'Cinzel', serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   padding-left: 20px;
 }
@@ -156,7 +156,7 @@ h2 {
   position: absolute;
   z-index: 2;
   top: -6px;
-  left: -6px;
+  left: 8px;
   width: 100%;
   height: 100%;
   background-image: url(../images/logo.svg);
@@ -251,6 +251,7 @@ section.home:after {
   font-size: 24px;
   line-height: 35px;
   text-align: left;
+  min-height: 245px;
 }
 
 .home__sub {
@@ -618,7 +619,8 @@ section.home:after {
 
 .behind-logo {
   position: relative;
-  max-width: 230px;
+  z-index: 3;
+  max-width: 170px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,8 +636,8 @@ section.home:after {
           align-items: center;
   font-family: 'Cinzel', serif;
   font-weight: bold;
-  font-size: 23px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   text-decoration: none;
 }
@@ -644,8 +646,8 @@ section.home:after {
   content: '';
   position: absolute;
   z-index: 2;
-  top: -9px;
-  left: 0;
+  top: -5px;
+  left: -18px;
   width: 100%;
   height: 100%;
   background-image: url(../images/logo.svg);
@@ -653,8 +655,8 @@ section.home:after {
 }
 
 .behind-logo span {
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .services {
@@ -1046,6 +1048,10 @@ section.home:after {
 .our-team .behind-logo {
   margin: 0 auto;
   opacity: 0.5;
+}
+
+.our-team .behind-logo:before {
+  left: 15px;
 }
 
 .platform {
@@ -2192,7 +2198,7 @@ div.page .form {
     bottom: 25px;
     width: 100%;
     max-width: 375px;
-    padding-bottom: 25px;
+    padding-bottom: 45px;
   }
   .slider-info .slick-next {
     left: 72%;
@@ -2596,6 +2602,7 @@ div.page .form {
   .home__heading p {
     font-size: 14px;
     line-height: 26px;
+    min-height: 205px;
   }
   section.home {
     padding: 130px 0 0 0;

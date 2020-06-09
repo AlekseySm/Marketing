@@ -523,7 +523,7 @@
                             </ul>
                         </div>
                         <div class="behind-item">
-                            <div class="behind-logo"><?php the_field('logo_first', 'options'); ?> <?php the_field('logo_second', 'options'); ?>
+                            <div class="behind-logo"><?php the_field('logo_first', 'options'); ?><br><?php the_field('logo_second', 'options'); ?>
                                 <span><?php the_field('logo_third', 'options'); ?></span></div>
                             <a href="#" class="behind-item__btn">Portfolio</a>
                         </div>
@@ -951,7 +951,7 @@
                             <div class="our-team__position">SMM Manager</div>
                         </li>
                     </ul>
-                    <div class="behind-logo"><?php the_field('logo_first', 'options'); ?> <?php the_field('logo_second', 'options'); ?>
+                    <div class="behind-logo"><?php the_field('logo_first', 'options'); ?><br><?php the_field('logo_second', 'options'); ?>
                         <span><?php the_field('logo_third', 'options'); ?></span></div>
                 </div>
             <?php endwhile; ?>

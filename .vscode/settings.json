@@ -3,5 +3,7 @@
         "format": "expanded",
         "extensionName": ".css",
         "savePath": "/Verstka/css"
-    }]
+    }
+],
+"liveServer.settings.port": 5501
 }
