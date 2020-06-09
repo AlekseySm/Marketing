@@ -906,51 +906,72 @@
                     <a href="#" class="btn-more closed">Read more</a>
                 </div>
                 <div class="our-team">
-                    <div class="our-team__title">Our team</div>
-                    <ul class="our-team__list">
-                        <li>
-                            <div class="our-team__photo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/2957.png" alt="Lui Parker">
-                            </div>
-                            <div class="our-team__name">Lui Parker</div>
-                            <div class="our-team__position">SMM Manager</div>
-                        </li>
-                        <li>
-                            <div class="our-team__photo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/612437-PNHQ5W-469.png" alt="Lui Parker">
-                            </div>
-                            <div class="our-team__name">Lui Parker</div>
-                            <div class="our-team__position">SMM Manager</div>
-                        </li>
-                        <li>
-                            <div class="our-team__photo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/135.png" alt="Lui Parker">
-                            </div>
-                            <div class="our-team__name">Lui Parker</div>
-                            <div class="our-team__position">SMM Manager</div>
-                        </li>
-                        <li>
-                            <div class="our-team__photo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/20922.png" alt="Lui Parker">
-                            </div>
-                            <div class="our-team__name">Lui Parker</div>
-                            <div class="our-team__position">SMM Manager</div>
-                        </li>
-                        <li>
-                            <div class="our-team__photo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/612437-PNHQ5W-469.png" alt="Lui Parker">
-                            </div>
-                            <div class="our-team__name">Lui Parker</div>
-                            <div class="our-team__position">SMM Manager</div>
-                        </li>
-                        <li>
-                            <div class="our-team__photo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/135.png" alt="Lui Parker">
-                            </div>
-                            <div class="our-team__name">Lui Parker</div>
-                            <div class="our-team__position">SMM Manager</div>
-                        </li>
-                    </ul>
+                    <?php if (have_rows('our_team')) : while (have_rows('our_team')) : the_row();
+                        // variables
+                        $title_item = get_sub_field('title_for_block');
+                        ?>
+                        <div class="our-team__title"><?php echo $title_item;?></div>
+                        <ul class="our-team__list">
+                            <?php if (have_rows('element_list')) : while (have_rows('element_list')) : the_row();
+                            // variables
+                            $photo = get_sub_field('photo');
+                            $name = get_sub_field('name');
+                            $position = get_sub_field('position');
+                            ?>
+                                <li>
+                                    <div class="our-team__photo">
+                                        <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>">
+                                    </div>
+                                    <div class="our-team__name"><?php echo $name;?></div>
+                                    <div class="our-team__position"><?php echo $position;?></div>
+                                </li>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
+<!--                            <li>-->
+<!--                                <div class="our-team__photo">-->
+<!--                                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/2957.png" alt="Lui Parker">-->
+<!--                                </div>-->
+<!--                                <div class="our-team__name">Lui Parker</div>-->
+<!--                                <div class="our-team__position">SMM Manager</div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="our-team__photo">-->
+<!--                                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/612437-PNHQ5W-469.png" alt="Lui Parker">-->
+<!--                                </div>-->
+<!--                                <div class="our-team__name">Lui Parker</div>-->
+<!--                                <div class="our-team__position">SMM Manager</div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="our-team__photo">-->
+<!--                                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/135.png" alt="Lui Parker">-->
+<!--                                </div>-->
+<!--                                <div class="our-team__name">Lui Parker</div>-->
+<!--                                <div class="our-team__position">SMM Manager</div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="our-team__photo">-->
+<!--                                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/20922.png" alt="Lui Parker">-->
+<!--                                </div>-->
+<!--                                <div class="our-team__name">Lui Parker</div>-->
+<!--                                <div class="our-team__position">SMM Manager</div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="our-team__photo">-->
+<!--                                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/612437-PNHQ5W-469.png" alt="Lui Parker">-->
+<!--                                </div>-->
+<!--                                <div class="our-team__name">Lui Parker</div>-->
+<!--                                <div class="our-team__position">SMM Manager</div>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <div class="our-team__photo">-->
+<!--                                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/135.png" alt="Lui Parker">-->
+<!--                                </div>-->
+<!--                                <div class="our-team__name">Lui Parker</div>-->
+<!--                                <div class="our-team__position">SMM Manager</div>-->
+<!--                            </li>-->
+                        </ul>
+                    <?php endwhile; ?>
+                    <?php endif; ?>
                     <div class="behind-logo"><?php the_field('logo_first', 'options'); ?><br><?php the_field('logo_second', 'options'); ?>
                         <span><?php the_field('logo_third', 'options'); ?></span></div>
                 </div>
