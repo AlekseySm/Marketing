@@ -13,7 +13,7 @@
                     <span><?php the_field('logo_third', 'options'); ?></span></a>
                 <ul class="footer__contacts">
                     <li><a href="tel:<?php the_field('phone', 'options'); ?>">Phone: <?php the_field('phone', 'options'); ?></a></li>
-                    <li><a href="mailto:<?php the_field('email', 'options'); ?>">Email: <?php the_field('email', 'options'); ?></a></li>
+                    <li><a href="mailto:<?php the_field('email', 'options'); ?>">E-mail: <?php the_field('email', 'options'); ?></a></li>
                     <li><a href="#" target="_blank" rel="noopener noreferrer"><?php the_field('adress', 'options'); ?></a></li>
                 </ul>
             </div>

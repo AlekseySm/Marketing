@@ -1301,7 +1301,7 @@
         <div class="contact__list">
             <div class="contact__wrapper">
                 <a href="tel:<?php the_field('phone', 'options'); ?>">Phone: <?php the_field('phone', 'options'); ?></a>
-                <a href="mailto:<?php the_field('email', 'options'); ?>">Email: <?php the_field('email', 'options'); ?></a>
+                <a href="mailto:<?php the_field('email', 'options'); ?>">E-mail: <?php the_field('email', 'options'); ?></a>
             </div>
             <a class="call" href="tel:<?php the_field('phone', 'options'); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/communications.png" alt="phone">
