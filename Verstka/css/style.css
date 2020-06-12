@@ -108,8 +108,8 @@ h2 {
   padding: 24px 0;
 }
 
-.header--fixed .header__logo:before {
-  background-image: url(../images/logo-w.svg);
+.header--fixed svg .st1 {
+  stroke: #fff;
 }
 
 .header__wrapper {
@@ -131,45 +131,11 @@ h2 {
 .header__logo {
   position: relative;
   z-index: 3;
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 120px;
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
-  padding-left: 20px;
 }
 
-.header__logo:before {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: -6px;
-  left: 8px;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-}
-
-.header__logo span {
-  font-size: 12px;
-  line-height: 14px;
+.header__logo svg {
+  width: 115px;
+  height: 55px;
 }
 
 .header__nav {
@@ -363,6 +329,11 @@ section.home:after {
           transition-duration: 0.5s;
 }
 
+.social-list li a img {
+  width: 49px;
+  height: 49px;
+}
+
 .social-list li a:hover svg,
 .social-list li a:hover img {
   -webkit-transform: scale(1.2);
@@ -428,7 +399,6 @@ section.home:after {
 .behind-item .behind-logo {
   z-index: 3;
   margin-bottom: 85px;
-  margin-left: 15px;
 }
 
 .slider-info .slick-prev {
@@ -631,43 +601,19 @@ section.home:after {
 .behind-logo {
   position: relative;
   z-index: 3;
-  max-width: 170px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
 }
 
-.behind-logo:before {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: -5px;
-  left: -18px;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-}
-
-.behind-logo span {
-  font-size: 14px;
-  line-height: 17px;
+.behind-logo svg {
+  position: relative;
+  z-index: 4;
+  width: 112px;
+  height: 57px;
 }
 
 .services {
@@ -1062,10 +1008,6 @@ section.home:after {
   opacity: 0.5;
 }
 
-.our-team .behind-logo:before {
-  left: 15px;
-}
-
 .platform {
   padding: 50px 0 100px 0;
 }
@@ -1430,10 +1372,6 @@ span.wpcf7-list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1441,32 +1379,16 @@ span.wpcf7-list-item {
       -ms-flex-align: center;
           align-items: center;
   max-width: 120px;
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
-  padding-left: 5px;
-  color: #FFFFFF;
   margin-right: 40px;
 }
 
-.footer__logo:before {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: -6px;
-  left: -6px;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
+.footer__logo svg {
+  width: 115px;
+  height: 55px;
 }
 
-.footer__logo span {
-  font-size: 12px;
-  line-height: 14px;
+.footer__logo svg .st2 {
+  fill: #fff;
 }
 
 .footer__main {
@@ -2388,19 +2310,11 @@ div.page .form {
     transform: rotate(-45deg) translateY(-17px);
   }
   .header__logo {
-    font-size: 11px;
-    line-height: 13px;
-    max-width: 70px;
     padding: 16px 0;
-    padding-left: 20px;
   }
-  .header__logo span {
-    font-size: 8px;
-    line-height: 10px;
-  }
-  .header__logo:before {
-    top: 9px;
-    left: 2px;
+  .header__logo svg {
+    width: 85px;
+    height: 41px;
   }
   .header__logo--open {
     position: absolute;
@@ -2410,16 +2324,13 @@ div.page .form {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  .header__logo--open:before {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/logo-w.svg);
-    background-repeat: no-repeat;
-    top: 9px;
-    left: 2px;
+  .header__logo--open svg {
+    width: 120px;
+    height: 60px;
+    margin-right: 24px;
+  }
+  .header__logo--open svg .st1 {
+    stroke: #fff;
   }
   .nav-list__item a {
     font-size: 21px;
