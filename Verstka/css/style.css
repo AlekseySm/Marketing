@@ -987,6 +987,11 @@ section.home:after {
   height: 152px;
   border-radius: 50%;
   margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.our-team__photo img {
+  width: 100%;
 }
 
 .our-team__name {
