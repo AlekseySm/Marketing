@@ -1453,12 +1453,12 @@ span.wpcf7-list-item {
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 75%;
+        width: 65%;
         box-sizing: border-box;
 
         &--col {
             flex-direction: column;
-            width: 25%;
+            width: 35%;
             justify-content: flex-start;
         }
     }
