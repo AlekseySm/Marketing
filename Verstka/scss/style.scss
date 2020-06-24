@@ -63,6 +63,20 @@ h2 {
     color: #000000;
 }
 
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+}
+
+p {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
 .main {
     position: relative;
     width: 100%;
@@ -1346,11 +1360,12 @@ span.wpcf7-list-item {
             max-width: 30px;
             max-height: 30px;
 
-            &:nth-last-of-type() {
-                margin: 0;
+            &:last-of-type {
+                margin-right: 0;
             }
 
             a {
+                margin: 0;
                 text-decoration: none;
                 transition-duration: 0.3s;
 
@@ -1473,6 +1488,7 @@ span.wpcf7-list-item {
         width: 100%;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
         list-style-type: none;
         margin: 0;
@@ -1490,6 +1506,10 @@ span.wpcf7-list-item {
                 &:hover {
                     text-decoration: underline;
                 }
+            }
+
+            &:last-of-type {
+                margin-right: 0;
             }
         }
     }
@@ -1812,6 +1832,37 @@ div.page {
 
 }
 
+.mfp-img {
+    max-height: 85vh !important;
+}
+
+// .mfp-close {
+//     margin-top: -80px;
+// }
+
+.home {
+
+    .portfolio-item-title,
+    .portfolio-item-desc {
+        display: none;
+    }
+}
+
+.portfolio-item-title {
+    font-size: 18px;
+    line-height: 140%;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.portfolio-item-desc {
+    font-size: 16px;
+    line-height: 140%;
+    color: #fff;
+    font-weight: normal;
+}
+
 @media screen and (max-width: 1800px) {
 
     section.home:after {
@@ -1951,6 +2002,10 @@ div.page {
     .our-team__list li {
         padding-right: 0;
         width: 40%;
+    }
+
+    .contact__list {
+        padding: 25px 50px;
     }
 
 }
@@ -2536,6 +2591,14 @@ div.page {
         background-position: bottom 75% center;
         background-size: 130%;
     }
+
+    .contact__list {
+        flex-direction: column;
+    }
+
+    .contact__social {
+        margin: 25px 0 0 0;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -2545,17 +2608,9 @@ div.page {
         background-size: 190%;
     }
 
-    .contact__list {
-        flex-direction: column;
-    }
-
     .contact__wrapper {
         width: 100%;
 
-    }
-
-    .contact__social {
-        margin: 25px 0 0 0;
     }
 
     .call {
@@ -2688,6 +2743,14 @@ div.page {
     section.home {
         background-size: 200%;
     }
+
+    .portfolio-item-title {
+        font-size: 16px;
+    }
+
+    .portfolio-item-desc {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -2732,6 +2795,10 @@ div.page {
 
     .info-item__title {
         padding-right: 100px;
+    }
+
+    .mfp-title {
+        font-size: 16px;
     }
 }
 

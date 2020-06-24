@@ -158,6 +158,7 @@
                 <ul class="footer__nav">
                     <li><a href="<?php echo site_url(); ?>/#services">Services</a></li>
                     <li><a href="<?php echo site_url(); ?>/#about-us">About Us</a></li>
+                    <li><a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></li>
                 </ul>
                 <ul class="footer__social">
                     <li>

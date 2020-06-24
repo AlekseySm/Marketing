@@ -111,13 +111,53 @@ $(document).ready(function () {
         return false;
     });
 
+
+
     function mugniPop(element) {
+
+
+
         $(element).magnificPopup({
             type: 'image',
             mainClass: 'mfp-with-zoom',
+            image: {
+                titleSrc: function (item) {
+                    // return item.el.find('img').attr('title');
+                    let markup = '';
+                    markup += '<h3 class="portfolio-item-title">' + item.el.find('img').attr('title') + '</h3><p class="portfolio-item-desc">' + item.el.find('img').attr('caption') + '</p>';
+
+                    return markup
+                },
+                // markup: '<div class="mfp-figure">' +
+                //     '<div class="mfp-close"></div>' +
+                //     '<div class="mfp-img"></div>' +
+                //     '<div class="mfp-bottom-bar">' +
+                //     '<div class="mfp-title"></div>' +
+                //     '<div class="mfp-counter"></div>' +
+                //     '<div class="small"></div>' +
+                //     '</div>' +
+                //     '</div>',
+            },
+            // callbacks: {
+            //     elementParse: function (item) {
+            //         let imgAlt = item.el.find('img').attr('alt');
+            //         return item.el.find('.small').html(imgAlt);
+            //     },
+            // },
             gallery: {
                 enabled: true
             },
+            // callbacks: {
+            //     resize: function () {
+            //         var img = this.content.find('img');
+            //         img.css('max-height', parseFloat(img.css('max-height')) * 0.85);
+            //     }                
+            // },
+            // callbacks: {
+            //     resize: changeImgSize,
+            //     // imageLoadComplete: changeImgSize,
+            //     // change: changeImgSize
+            // },
 
             zoom: {
                 enabled: true,
@@ -151,4 +191,10 @@ $(document).ready(function () {
     if (window.pageYOffset >= 70) {
         $('.header-js').addClass('header--fixed');
     }
+
 });
+
+// function changeImgSize() {
+//     var img = this.content.find('.mfp-img');
+//     img.css('max-height', parseFloat(img.css('max-height')) * 0.85);
+// };
