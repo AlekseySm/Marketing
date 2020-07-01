@@ -8,6 +8,9 @@ yarn-error.log
 /.idea
 package-lock.json
 
+.idea
+.vscode
+
 /public/build
 /maintenance/build
 yarn.lock
