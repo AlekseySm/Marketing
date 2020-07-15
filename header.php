@@ -5,7 +5,7 @@ get_template_part('head');
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <div class="main">
+    <div class="main">        
         <header class="header header-js">
             <div class="conteiner">
                 <div class="header__wrapper">
@@ -149,23 +149,44 @@ get_template_part('head');
                         </svg>
                     </a>
                     <nav class="header__nav">
-                        <ul class="nav-list js-nav" id="nav-block">
-                            <li class="nav-list__item">
-                                <a href="#services" class="nav-list__link js-menu-toggle nav-list__link-js">
-                                    Services
-                                </a>
-                            </li>
-                            <li class="nav-list__item">
-                                <a href="#about-us" class="nav-list__link js-menu-toggle nav-list__link-js">
-                                    About Us
-                                </a>
-                            </li>
-                            <li class="nav-list__item">
-                                <a href="#contact" class="nav-list__link js-menu-toggle nav-list__link-js">
-                                    Contact Us
-                                </a>
-                            </li>
-                        </ul>
+                        <?php
+                            wp_nav_menu(array(
+                                'theme_location' => '',
+                                'menu' => 'header_menu',
+                                'container' => 'li',
+                                'container_class' => '',
+                                'container_id' => '',
+                                'menu_class' => 'nav-list js-nav',
+                                'menu_id' => 'nav-block',
+                                'echo' => true,
+                                'fallback_cb' => '',
+                                'before' => '',
+                                'after' => '',
+                                'link_before' => '',
+                                'link_after' => '',
+                                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'depth' => 0,
+                                'walker' => '',
+                                'add_li_class'  => 'nav-list__item'
+                            ));
+                        ?>
+<!--                        <ul class="nav-list js-nav" id="nav-block">-->
+<!--                            <li class="nav-list__item">-->
+<!--                                <a href="#services" class="nav-list__link js-menu-toggle nav-list__link-js">-->
+<!--                                    Services-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-list__item">-->
+<!--                                <a href="#about-us" class="nav-list__link js-menu-toggle nav-list__link-js">-->
+<!--                                    About Us-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-list__item">-->
+<!--                                <a href="#contact" class="nav-list__link js-menu-toggle nav-list__link-js">-->
+<!--                                    Contact Us-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
                     </nav>
                     <div class="toggler">
                         <div class="toggler__icon js-menu-toggle">

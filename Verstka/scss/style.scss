@@ -3,6 +3,33 @@ body {
     text-decoration: none;
     width: 100%;
     height: 100%;
+
+    &.rtl {
+        text-align: right;
+
+        .home__heading,
+        .about-us__txt-block {
+            p {
+                text-align: right;
+            }
+        }
+
+        .form__radio-label {
+            text-align: right;
+        }
+
+        input {
+            text-align: end;
+
+            &[type=submit] {
+                text-align: center;
+            }
+        }
+
+        .contact__wrapper {
+            align-items: flex-end;
+        }
+    }
 }
 
 body,
@@ -269,8 +296,6 @@ section.home {
         min-height: 245px;
     }
 }
-
-
 
 .home__sub {
     height: 100%;
@@ -1266,13 +1291,17 @@ section.home {
         margin-bottom: 8px;
         position: relative;
         z-index: 3;
-        background: #ffd83f;
+        background: transparent;
     }
 
     &__item {
         position: relative;
         width: 50%;
         margin-bottom: 18px;
+
+        p {
+            margin-bottom: 0;
+        }
 
         &:nth-child(even) {
             margin-left: 30px;
@@ -1330,6 +1359,7 @@ span.wpcf7-list-item {
             line-height: 24px;
             font-weight: 600;
             margin-right: 10px;
+            margin-bottom: 10px;
             text-decoration: none;
             transition-duration: 0.3s;
 
@@ -1341,9 +1371,9 @@ span.wpcf7-list-item {
 
     &__wrapper {
         display: flex;
-        flex-flow: row nowrap;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         width: 50%;
     }
 
@@ -1863,6 +1893,40 @@ div.page {
     font-weight: normal;
 }
 
+.pll-parent-menu-item {
+    position: relative;
+
+    .sub-menu {
+        display: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &:hover .sub-menu {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: -10px;
+        background: #fff;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        z-index: 1;
+        border-radius: 6px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.lang-item {
+    a {
+        img {
+            width: 20px;
+            height: 16px;
+        }
+    }
+}
+
 @media screen and (max-width: 1800px) {
 
     section.home:after {
@@ -1944,15 +2008,6 @@ div.page {
         &:after {
             background-position: bottom 6% right 5%;
         }
-    }
-
-    .contact__wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .contact__list a {
-        margin-bottom: 10px;
     }
 
     .home__sub {

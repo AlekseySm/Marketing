@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('[id ^= menu-item]').find('[href ^= "#"]').not('[href = "#pll_switcher"]').addClass('nav-list__link js-menu-toggle nav-list__link-js');
+
     $('.js-menu-toggle').on('click', function () {
         $(this).toggleClass('toggler__icon--open');
         $('.js-nav').toggleClass('nav-list--open');
@@ -8,6 +10,8 @@ $(document).ready(function () {
 
     $('.nav-list__link-js').on('click', function () {
         $('.js-menu-toggle').removeClass('toggler__icon--open');
+        $('.js-nav').removeClass('nav-list--open');
+        $('.header__logo').removeClass('header__logo--open');
     });
 
     $(".nav-list__link-js").on("click", function (event) {
@@ -30,6 +34,20 @@ $(document).ready(function () {
             scrollTop: $($(this).attr("href")).offset().top - 70,
         }, 900);
     });
+
+    // $('a[href="#contact"]').on("click", function (event) {
+    //     event.preventDefault();
+    //     $("html, body").stop().animate({
+    //         scrollTop: $($(this).attr("href")).offset().top - 70,
+    //     }, 900);
+    // });
+
+    // $('a[href="#about-us"]').on("click", function (event) {
+    //     event.preventDefault();
+    //     $("html, body").stop().animate({
+    //         scrollTop: $($(this).attr("href")).offset().top - 70,
+    //     }, 900);
+    // });
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -92,7 +110,7 @@ $(document).ready(function () {
         maxItems: 1
     });
 
-    $("input[type='tel']").mask("+38 099 999-99-99");
+    $("input[type='tel']").mask("+999 99 999-99-99");
 
     $('.info-item__list-name').on('click', function () {
         let $oc = $(this).next();
@@ -110,7 +128,6 @@ $(document).ready(function () {
         }
         return false;
     });
-
 
 
     function mugniPop(element) {
