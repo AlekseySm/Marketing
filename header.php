@@ -149,6 +149,27 @@ get_template_part('head');
                         </svg>
                     </a>
                     <nav class="header__nav">
+                        <?php
+                            wp_nav_menu(array(
+                                'theme_location' => '',
+                                'menu' => 'header_menu',
+                                'container' => 'li',
+                                'container_class' => '',
+                                'container_id' => '',
+                                'menu_class' => '',
+                                'menu_id' => '',
+                                'echo' => true,
+                                'fallback_cb' => '',
+                                'before' => '',
+                                'after' => '',
+                                'link_before' => '',
+                                'link_after' => '',
+                                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'depth' => 0,
+                                'walker' => '',
+                                'add_li_class'  => ''
+                            ));
+                        ?>
                         <ul class="nav-list js-nav" id="nav-block">
                             <li class="nav-list__item">
                                 <a href="#services" class="nav-list__link js-menu-toggle nav-list__link-js">
