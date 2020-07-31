@@ -9,7 +9,13 @@ get_header('page');
 <div class="page service-page">
     <nav class="breadcrumbs conteiner" aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb__item"> <a class="breadcrumb__link" href="/#services">Service</a>
+            <li class="breadcrumb__item"> 
+                <a class="breadcrumb__link" href="<?php 
+                                                    if (get_locale() == 'ar') {
+                                                        echo site_url("/ar/حلول-رقمية-فعالة/");
+                                                    } else {
+                                                        echo site_url();
+                                                }?>#services"><?php pll_e('Services'); ?></a>
             </li>
             <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
                 <?php the_title() ?>

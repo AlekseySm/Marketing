@@ -9,7 +9,13 @@
     <div class="conteiner">
         <div class="footer__main">
             <div class="footer__wrapper">
-                <a href="<?php echo site_url(); ?>" class="footer__logo">
+                <a href="<?php
+                    if (get_locale() == 'ar') {
+                        echo site_url("/ar/حلول-رقمية-فعالة");
+                    } else {
+                        echo site_url();
+                    }                     
+                     ?>" class="footer__logo">
                     <!-- <?php the_field('logo_first', 'options'); ?> <?php the_field('logo_second', 'options'); ?>
                     <span><?php the_field('logo_third', 'options'); ?></span> -->
                     <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 117.3 59.3" style="enable-background:new 0 0 117.3 59.3;" xml:space="preserve">
@@ -149,16 +155,34 @@
                     </svg>
                 </a>
                 <ul class="footer__contacts">
-                    <li><a href="tel:<?php the_field('phone', 'options'); ?>">Phone: <?php the_field('phone', 'options'); ?></a></li>
-                    <li><a href="mailto:<?php the_field('email', 'options'); ?>">E-mail: <?php the_field('email', 'options'); ?></a></li>
+                    <li><a href="tel:<?php the_field('phone', 'options'); ?>"><?php pll_e('Phone'); ?>: <?php the_field('phone', 'options'); ?></a></li>
+                    <li><a href="mailto:<?php the_field('email', 'options'); ?>"><?php pll_e('E-mail'); ?>: <?php the_field('email', 'options'); ?></a></li>
                     <li><a href="#" target="_blank" rel="noopener noreferrer"><?php the_field('adress', 'options'); ?></a></li>
                 </ul>
             </div>
             <div class="footer__wrapper footer__wrapper--col">
                 <ul class="footer__nav">
-                    <li><a href="<?php echo site_url(); ?>/#services">Services</a></li>
-                    <li><a href="<?php echo site_url(); ?>/#about-us">About Us</a></li>
-                    <li><a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="<?php
+                    if (get_locale() == 'ar') {
+                        echo site_url("/ar/حلول-رقمية-فعالة");
+                    } else {
+                        echo site_url();
+                    }                     
+                     ?>/#services"><?php pll_e('Services'); ?></a></li>
+                    <li><a href="<?php
+                    if (get_locale() == 'ar') {
+                        echo site_url("/ar/حلول-رقمية-فعالة");
+                    } else {
+                        echo site_url();
+                    }                     
+                     ?>/#about-us"><?php pll_e('About Us'); ?></a></li>
+                    <li><a href="<?php
+                    if (get_locale() == 'ar') {
+                        echo site_url("/ar/privacy-policy-2/");
+                    } else {
+                        echo site_url("privacy-policy");
+                    }                     
+                     ?>"><?php pll_e('Privacy Policy'); ?></a></li>
                 </ul>
                 <ul class="footer__social">
                     <li>
@@ -253,8 +277,8 @@
                 </ul>
             </div>
         </div>
-        <div class="copyright">
-            © 2020 All rights reserved
+        <div class="copyright">© <?php echo date("Y"); ?>        
+        <?php pll_e('All rights reserved'); ?>
         </div>
     </div>
 </footer>

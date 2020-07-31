@@ -73,6 +73,24 @@ add_action('after_setup_theme', 'travel_setup');
 
 add_action('customize_register', 'dco_customize_register');
 
+add_action('init', function() {
+    pll_register_string('custom', 'Services');
+    pll_register_string('custom', 'Portfolio');
+    pll_register_string('custom', 'About Us');
+    pll_register_string('custom', 'Platforms');
+    pll_register_string('custom', 'Contact Us');
+    pll_register_string('custom', 'Our Portfolio');
+    pll_register_string('custom', 'Phone');
+    pll_register_string('custom', 'E-mail');
+    pll_register_string('custom', 'Privacy Policy');
+    pll_register_string('custom', 'All rights reserved');
+    pll_register_string('custom', 'Social media marketing');
+    pll_register_string('custom', 'Content creation');
+    pll_register_string('custom', 'SEO');
+    pll_register_string('custom', 'Website, App Development');
+});
+
+
 function travel_scripts()
 {
     wp_enqueue_style('slick-theme', get_template_directory_uri() . '/Verstka/liberary/slick/slick-theme.css', array(), '0.2');

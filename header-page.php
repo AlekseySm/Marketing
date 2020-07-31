@@ -8,8 +8,13 @@ get_template_part('head');
     <div class="main">
         <header class="header header--fixed">
             <div class="conteiner">
-                <div class="header__wrapper">
-                    <a href="<?php echo site_url(); ?>" class="header__logo">
+                <div class="header__wrapper">                   
+                    <a href="<?php 
+                    if (get_locale() == 'ar') {
+                        echo site_url("/ar/حلول-رقمية-فعالة/");
+                      } else {
+                            echo site_url();
+                        }?>" class="header__logo">
                         <!-- <?php the_field('logo_first', 'options'); ?> <?php the_field('logo_second', 'options'); ?>
                     <span><?php the_field('logo_third', 'options'); ?></span> -->
                         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 117.3 59.3" style="enable-background:new 0 0 117.3 59.3;" xml:space="preserve">
@@ -148,16 +153,47 @@ get_template_part('head');
                             </g>
                         </svg>
                     </a>
-                    <nav class="header__nav">
+                    <nav class="header__nav">                  
+                        <ul class="nav-list js-nav" id="nav-block">
+                            <li class="nav-list__item">
+                                <a href="<?php if (get_locale() == 'ar') {
+                        echo site_url("/ar");
+                      } else {
+                            echo site_url();
+                        } ?>/#services" class="nav-list__link js-menu-toggle">
+                                <?php pll_e('Services'); ?>
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a href="<?php if (get_locale() == 'ar') {
+                        echo site_url("/ar");
+                      } else {
+                            echo site_url();
+                        } ?>/#about-us" class="nav-list__link js-menu-toggle">
+                                <?php pll_e('About Us'); ?>
+                                </a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a href="<?php if (get_locale() == 'ar') {
+                        echo site_url("/ar");
+                      } else {
+                            echo site_url();
+                        } ?>/#contact" class="nav-list__link js-menu-toggle">
+                                <?php pll_e('Contact Us'); ?>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="languages">
                     <?php
                             wp_nav_menu(array(
                                 'theme_location' => '',
-                                'menu' => 'header_menu',
+                                'menu' => 'lang-menu-mob',
                                 'container' => 'li',
                                 'container_class' => '',
                                 'container_id' => '',
-                                'menu_class' => 'nav-list js-nav',
-                                'menu_id' => 'nav-block',
+                                'menu_class' => 'languages-list',
+                                'menu_id' => '',
                                 'echo' => true,
                                 'fallback_cb' => '',
                                 'before' => '',
@@ -167,27 +203,10 @@ get_template_part('head');
                                 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                                 'depth' => 0,
                                 'walker' => '',
-                                'add_li_class'  => 'nav-list__item'
+                                'add_li_class'  => ''
                             ));
                         ?>
-                        <!-- <ul class="nav-list js-nav" id="nav-block">
-                            <li class="nav-list__item">
-                                <a href="<?php echo site_url(); ?>/#services" class="nav-list__link js-menu-toggle">
-                                    Services
-                                </a>
-                            </li>
-                            <li class="nav-list__item">
-                                <a href="<?php echo site_url(); ?>/#about-us" class="nav-list__link js-menu-toggle">
-                                    About Us
-                                </a>
-                            </li>
-                            <li class="nav-list__item">
-                                <a href="<?php echo site_url(); ?>/#contact" class="nav-list__link js-menu-toggle">
-                                    Contact Us
-                                </a>
-                            </li>
-                        </ul> -->
-                    </nav>
+                    </div>
                     <div class="toggler">
                         <div class="toggler__icon js-menu-toggle">
                             <span class="toggler__line"></span>

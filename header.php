@@ -9,7 +9,12 @@ get_template_part('head');
         <header class="header header-js">
             <div class="conteiner">
                 <div class="header__wrapper">
-                    <a href="<?php echo site_url(); ?>" class="header__logo">
+                    <a href="<?php 
+                    if (get_locale() == 'ar') {
+                        echo site_url("/ar/حلول-رقمية-فعالة/");
+                      } else {
+                            echo site_url();
+                        }?>" class="header__logo">
                         <!-- <?php the_field('logo_first', 'options'); ?> <?php the_field('logo_second', 'options'); ?>
                         <span><?php the_field('logo_third', 'options'); ?></span> -->
                         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 117.3 59.3" style="enable-background:new 0 0 117.3 59.3;" xml:space="preserve">
@@ -188,6 +193,29 @@ get_template_part('head');
 <!--                            </li>-->
 <!--                        </ul>-->
                     </nav>
+                    <div class="languages">
+                        <?php
+                            wp_nav_menu(array(
+                                'theme_location' => '',
+                                'menu' => 'lang-menu-mob',
+                                'container' => 'li',
+                                'container_class' => '',
+                                'container_id' => '',
+                                'menu_class' => 'languages-list',
+                                'menu_id' => '',
+                                'echo' => true,
+                                'fallback_cb' => '',
+                                'before' => '',
+                                'after' => '',
+                                'link_before' => '',
+                                'link_after' => '',
+                                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'depth' => 0,
+                                'walker' => '',
+                                'add_li_class'  => ''
+                            ));
+                        ?>
+                    </div>
                     <div class="toggler">
                         <div class="toggler__icon js-menu-toggle">
                             <span class="toggler__line"></span>
