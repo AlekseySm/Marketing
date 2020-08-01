@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="<?php echo get_locale() ?>">
 
 <head>
       <meta charset="<?php bloginfo('charset'); ?>">

@@ -6,6 +6,7 @@ $(document).ready(function () {
         $(this).toggleClass('toggler__icon--open');
         $('.js-nav').toggleClass('nav-list--open');
         $('.header__logo').toggleClass('header__logo--open');
+        $('.languages-list').toggleClass('languages-list--left');
     });
 
     $('.nav-list__link-js').on('click', function () {
@@ -119,16 +120,27 @@ $(document).ready(function () {
     });
 
     $('.btn-more').on('click', function () {
-        $(this).toggleClass('opened').toggleClass('closed').prev().slideToggle();
 
-        if ($(this).hasClass('opened')) {
-            $(this).html('свернуть');
+        if ($('html')[0].lang == "ar") {
+            $(this).toggleClass('opened').toggleClass('closed').prev().slideToggle();
+
+            if ($(this).hasClass('opened')) {
+                $(this).html('نشمر');
+            } else {
+                $(this).html('قراءة المزيد');
+            }
+
         } else {
-            $(this).html('Read more');
+            $(this).toggleClass('opened').toggleClass('closed').prev().slideToggle();
+
+            if ($(this).hasClass('opened')) {
+                $(this).html('Roll up');
+            } else {
+                $(this).html('Read more');
+            }
         }
         return false;
     });
-
 
     function mugniPop(element) {
 
@@ -139,42 +151,16 @@ $(document).ready(function () {
             mainClass: 'mfp-with-zoom',
             image: {
                 titleSrc: function (item) {
-                    // return item.el.find('img').attr('title');
                     let markup = '';
                     markup += '<h3 class="portfolio-item-title">' + item.el.find('img').attr('title') + '</h3><p class="portfolio-item-desc">' + item.el.find('img').attr('caption') + '</p>';
 
                     return markup
                 },
-                // markup: '<div class="mfp-figure">' +
-                //     '<div class="mfp-close"></div>' +
-                //     '<div class="mfp-img"></div>' +
-                //     '<div class="mfp-bottom-bar">' +
-                //     '<div class="mfp-title"></div>' +
-                //     '<div class="mfp-counter"></div>' +
-                //     '<div class="small"></div>' +
-                //     '</div>' +
-                //     '</div>',
             },
-            // callbacks: {
-            //     elementParse: function (item) {
-            //         let imgAlt = item.el.find('img').attr('alt');
-            //         return item.el.find('.small').html(imgAlt);
-            //     },
-            // },
+
             gallery: {
                 enabled: true
             },
-            // callbacks: {
-            //     resize: function () {
-            //         var img = this.content.find('img');
-            //         img.css('max-height', parseFloat(img.css('max-height')) * 0.85);
-            //     }                
-            // },
-            // callbacks: {
-            //     resize: changeImgSize,
-            //     // imageLoadComplete: changeImgSize,
-            //     // change: changeImgSize
-            // },
 
             zoom: {
                 enabled: true,
@@ -200,10 +186,6 @@ $(document).ready(function () {
             $('.header-js').removeClass('header--fixed');
         }
     });
-
-    // $(window).on('popstate', function () {
-    //     location.reload(true);
-    // });
 
     if (window.pageYOffset >= 70) {
         $('.header-js').addClass('header--fixed');

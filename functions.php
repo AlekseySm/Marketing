@@ -88,6 +88,8 @@ add_action('init', function() {
     pll_register_string('custom', 'Content creation');
     pll_register_string('custom', 'SEO');
     pll_register_string('custom', 'Website, App Development');
+    pll_register_string('custom', 'Read more');
+    pll_register_string('custom', 'Roll up');
 });
 
 

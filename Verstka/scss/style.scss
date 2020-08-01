@@ -34,11 +34,13 @@ body {
 
         .contact__wrapper {
             align-items: flex-end;
+            padding-left: 70px;
+            box-sizing: border-box;
         }
 
         .call {
             right: auto;
-            left: 25px;
+            left: 20px;
         }
 
         // .footer__contacts {
@@ -1958,6 +1960,29 @@ div.page {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    &--left {
+        #menu-item-422-ar {
+            a {
+                &:before {
+                    content: 'ع';
+                    right: auto;
+                    left: 25px;
+                }
+            }
+        }
+
+        #menu-item-422-en {
+
+            a {
+                &:before {
+                    content: 'En';
+                    right: auto;
+                    left: 25px;
+                }
+            }
+        }
+    }
 }
 
 #menu-item-422-ar {
