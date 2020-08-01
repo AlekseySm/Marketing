@@ -1950,6 +1950,10 @@ div.page .form {
   padding: 0;
 }
 
+.languages-list--left {
+  display: block !important;
+}
+
 .languages-list--left #menu-item-422-ar a:before {
   content: 'ع';
   right: auto;
@@ -2494,6 +2498,9 @@ div.page .form {
   .toggler__icon--open .toggler__line:after {
     -webkit-transform: rotate(-45deg) translateY(-17px);
     transform: rotate(-45deg) translateY(-17px);
+  }
+  .header--fixed .languages-list {
+    display: none;
   }
   .header__logo {
     position: relative;

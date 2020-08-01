@@ -1962,6 +1962,8 @@ div.page {
     padding: 0;
 
     &--left {
+        display: block !important;
+
         #menu-item-422-ar {
             a {
                 &:before {
@@ -2630,6 +2632,12 @@ div.page {
     .toggler__icon--open .toggler__line:after {
         -webkit-transform: rotate(-45deg) translateY(-17px);
         transform: rotate(-45deg) translateY(-17px);
+    }
+
+    .header--fixed {
+        .languages-list {
+            display: none;
+        }
     }
 
     .header__logo {
