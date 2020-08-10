@@ -155,7 +155,16 @@
                     </svg>
                 </a>
                 <ul class="footer__contacts">
-                    <li><a href="tel:<?php the_field('phone', 'options'); ?>"><?php pll_e('Phone'); ?>: <?php the_field('phone', 'options'); ?></a></li>
+                    <li><a href="tel:<?php the_field('phone', 'options'); ?>"><?php pll_e('Phone'); ?>:
+                            <?php if (get_locale() == 'ar') {
+                                echo '<bdo>';
+                                the_field('phone', 'options');
+                                echo '</bdo>';
+                            } else {
+                                the_field('phone', 'options');
+                            }
+                            ?>
+                        </a></li>
                     <li><a href="mailto:<?php the_field('email', 'options'); ?>"><?php pll_e('E-mail'); ?>: <?php the_field('email', 'options'); ?></a></li>
                     <li><a href="#" target="_blank" rel="noopener noreferrer"><?php the_field('adress', 'options'); ?></a></li>
                 </ul>

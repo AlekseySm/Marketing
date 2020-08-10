@@ -1053,7 +1053,7 @@
                                             echo site_url("/ar/تطبيقات-الهاتف-الجوال/");
                                         } else {
                                             echo site_url('mobile-applications');
-                                        }?>">                                    
+                                        }?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="111.221" height="111.221" viewBox="0 0 111.221 111.221">
                                             <defs>
                                                 <style>
@@ -1080,7 +1080,7 @@
                                             echo site_url("/ar/العلامة-التجارية/");
                                         } else {
                                             echo site_url('full-branding');
-                                        }?>">                                    
+                                        }?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="105.473" height="112.747" viewBox="0 0 105.473 112.747">
                                             <defs>
                                                 <style>
@@ -1682,7 +1682,17 @@
     <div class="conteiner">
         <div class="contact__list">
             <div class="contact__wrapper">
-                <a href="tel:<?php the_field('phone', 'options'); ?>"><?php pll_e('Phone'); ?>: <?php the_field('phone', 'options'); ?></a>
+                <a href="tel:<?php the_field('phone', 'options'); ?>">
+                    <?php pll_e('Phone'); ?>:
+                    <?php if (get_locale() == 'ar') {
+                        echo '<bdo>';
+                        the_field('phone', 'options');
+                        echo '</bdo>';
+                        } else {
+                        the_field('phone', 'options');
+                        }
+                    ?>
+                </a>
                 <a href="mailto:<?php the_field('email', 'options'); ?>"><?php pll_e('E-mail'); ?>: <?php the_field('email', 'options'); ?></a>
             </div>
             <a class="call" href="tel:<?php the_field('phone', 'options'); ?>">
