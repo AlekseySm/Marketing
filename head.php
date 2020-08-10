@@ -3,20 +3,18 @@
 
 <head>
       <meta charset="<?php bloginfo('charset'); ?>">
-
-      <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
       <meta name="keywords" content="">
-      <meta property="og:type" content="website">
-      <meta property="og:title" content="---">
-      <meta property="og:description" content="---">
-      <meta property="og:image" content="---">
-      <meta property="og:url" content="---">
-      <meta name="twitter:image" content="---">
-      <meta name="twitter:title" content="---">
-      <meta name="twitter:url" content="---">
-      <meta name="twitter:card" content="summary">
-      <meta name="twitter:description" content="---">
+<!--      <meta property="og:type" content="website">-->
+<!--      <meta property="og:title" content="Digital Support for your Business">-->
+<!--      <meta property="og:description" content="We are a full-service creative and digital marketing agency.We collaborate with brands to accelerate their growth. Let’s turn your followers into your customers.">-->
+      <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/Verstka/images/samoletik_bumazhniy@2x.png">
+<!--      <meta property="og:url" content="https://organizermarketing.com">-->
+      <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/Verstka/images/samoletik_bumazhniy@2x.png">
+<!--      <meta name="twitter:title" content="Digital Support for your Business">-->
+<!--      <meta name="twitter:url" content="https://organizermarketing.com">-->
+<!--      <meta name="twitter:card" content="summary">-->
+<!--      <meta name="twitter:description" content="We are a full-service creative and digital marketing agency.We collaborate with brands to accelerate their growth. Let’s turn your followers into your customers.">-->
 
       <!-- Favicons -->
       <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/build/images/favicons/apple-touch-icon.png">
@@ -29,8 +27,8 @@
       <!--  <link rel="shortcut icon" href="--><?php //echo get_template_directory_uri(); 
                                                 ?>
       <!--/build/images/favicons/favicon.ico">-->
-      <meta name="apple-mobile-web-app-title" content="4eck Theme">
-      <meta name="application-name" content="4eck Theme">
+      <meta name="apple-mobile-web-app-title" content="Digital Support for your Business">
+      <meta name="application-name" content="Digital Support for your Business">
       <meta name="msapplication-TileColor" content="#00aba9">
       <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/build/images/favicons/mstile-144x144.png">
       <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/build/images/favicons/browserconfig.xml">
