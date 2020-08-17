@@ -2308,6 +2308,9 @@ div.page .form {
   }
   .header__wrapper {
     position: inherit;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   #menu-item-422-ar a:before,
   #menu-item-422-en a:before {
